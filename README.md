@@ -399,36 +399,8 @@ Contributions are welcome! Please:
 4. Add tests
 5. Submit a pull request
 
-## License
-
-MIT License - See LICENSE file for details
-
-## Citation
-
-If you use OptiStream in your research, please cite:
-
-```bibtex
-@software{optistream2024,
-  title = {OptiStream: High-Performance Video Processing and Inference SDK},
-  author = {OptiStream Contributors},
-  year = {2024},
-  url = {https://github.com/arslanamjad19/OptiStream}
-}
-```
-
-## Acknowledgments
-
-- GStreamer Project
-- ONNX Runtime Team  
-- OpenCV Community
-- pybind11 Developers
-
 ## Contact
 
 For questions and support:
 - GitHub Issues: https://github.com/arslanamjad19/OptiStream/issues
 - Documentation: https://github.com/arslanamjad19/OptiStream/wiki
-
----
-
-**OptiStream** - Stream processing at the speed of thought 🚀
