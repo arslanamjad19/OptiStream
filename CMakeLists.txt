@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Options
 option(BUILD_PYTHON_BINDINGS "Build Python bindings" ON)
 option(BUILD_TESTS "Build tests" ON)
+option(BUILD_EXAMPLES "Build C++ examples" ON)
 
 # Find required packages
 find_package(PkgConfig REQUIRED)
@@ -91,6 +92,20 @@ endif()
 if(BUILD_TESTS)
     enable_testing()
     add_subdirectory(tests)
+endif()
+
+# Examples
+if(BUILD_EXAMPLES)
+    add_executable(simple_pipeline examples/simple_pipeline.cpp)
+    target_link_libraries(simple_pipeline
+        optistream_core
+        ${GSTREAMER_LIBRARIES}
+        ${GSTREAMER_APP_LIBRARIES}
+        ${OpenCV_LIBS}
+    )
+    
+    install(TARGETS simple_pipeline
+        RUNTIME DESTINATION bin)
 endif()
 
 # Install
